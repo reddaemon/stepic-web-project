@@ -19,7 +19,7 @@ class Question(models.Model):
 	added_at = models.DateTimeField(auto_now_add=True)
 	rating = models.IntegerField()
 	author = models.OneToOneField(User, on_delete=models.CASCADE)
-	likes = models.ManyToManyField(User, related_name='question_like_user')
+	like = models.ManyToManyField(User, related_name='question_like_user')
 
 
 class Answer(models.Model):
